@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int x1,x2,v1,v2;
+    scanf("%d%d%d%d",&x1,&v1,&x2,&v2);
+   if(v2>=v1 && x1!=x2){
+       
+       printf("NO");
+       
+   }
+   else{
+       
+       float x = (float)(x2-x1)/(v1-v2);
+        x=x*10;
+        int a=x;
+        a=a%10;
+        if(a==0 &&x>0)    
+        printf("YES");  
+           
+       else
+           printf("NO");
+       
+   }
+  
+}
