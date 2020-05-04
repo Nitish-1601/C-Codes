@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define n 10
+char s[n];
+int front=-1,rear=-1;
+char en(char a)
+{
+    if(rear==n-1)
+    {
+        printf("full");
+        exit(0);
+    }
+    if(front==-1 && rear==-1){
+            front++;rear++;
+    }
+    else{
+        rear++;
+        s[rear]=a;
+    }
+
+}
+int main()
+{
+    int k,i;
+    scanf("%d",&k);
+    for(i=0;i<k;i++){
+        scanf(" %c",&s[i]);
+        en(s[i]);
+    }
+    printf("%s",s);
+}
